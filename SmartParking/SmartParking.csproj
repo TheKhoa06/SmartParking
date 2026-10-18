@@ -1,0 +1,88 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <LangVersion>latest</LangVersion>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <NoWarn>$(NoWarn);WFO1000;CS8602;CS8604;CS0414;CS8632</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.VisualBasic" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClosedXML" Version="0.105.1" />
+    <PackageReference Include="ZXing.Net" Version="0.16.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Forms Designer Dependency -->
+    <Compile Update="UI\Forms\frmDbConfig.Designer.cs">
+      <DependentUpon>frmDbConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\Forms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\Forms\frmLostTicket.Designer.cs">
+      <DependentUpon>frmLostTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\Forms\frmPlateWarning.Designer.cs">
+      <DependentUpon>frmPlateWarning.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\Forms\frmPrintTicket.Designer.cs">
+      <DependentUpon>frmPrintTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\Forms\frmQuickReceipt.Designer.cs">
+      <DependentUpon>frmQuickReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\Forms\frmShiftHandover.Designer.cs">
+      <DependentUpon>frmShiftHandover.cs</DependentUpon>
+    </Compile>
+
+    <!-- UserControls Designer Dependency -->
+    <Compile Update="UI\UserControls\ucParkingMap.Designer.cs">
+      <DependentUpon>ucParkingMap.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\UserControls\ucGateControl.Designer.cs">
+      <DependentUpon>ucGateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\UserControls\ucDashboard.Designer.cs">
+      <DependentUpon>ucDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\UserControls\ucAbandonedVehicles.Designer.cs">
+      <DependentUpon>ucAbandonedVehicles.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\UserControls\ucHistory.Designer.cs">
+      <DependentUpon>ucHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\UserControls\ucPricingConfig.Designer.cs">
+      <DependentUpon>ucPricingConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\UserControls\ucStaffManager.Designer.cs">
+      <DependentUpon>ucStaffManager.cs</DependentUpon>
+    </Compile>
+    <Compile Update="UI\UserControls\ucResidentMonthly.Designer.cs">
+      <DependentUpon>ucResidentMonthly.cs</DependentUpon>
+    </Compile>
+
+    <Compile Update="UI\Forms\*.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\UserControls\*.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>
